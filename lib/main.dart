@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/screens/date_screen.dart';
+import 'package:table_calendar/table_calendar.dart';
 import 'screens/splash_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/forgot_password.dart';
@@ -35,17 +37,22 @@ class MyApp extends StatelessWidget {
         '/login': (context) => LoginScreen(),
         '/forgot': (context) => ForgotPassword(),
         '/register': (context) => RegistrationScreen(),
-        '/home': (context) => HomeScreen(userRole: '',),
+        '/home': (context) => HomeScreen(userRole: ''),
         '/health': (context) => HealthRegistration(),
         '/total': (context) => TotalRegister(),
         '/schedule': (context) => ScheduleScreen(),
         '/scheduleAdmin': (context) => ScheduleAdmin(),
         '/scheduleMedical': (context) => ScheduleMedical(),
+        '/dateScreen': (context) => DateScreen(onDateSelected: OnSelectedDate),
         '/result': (context) => ResultScreen(),
         '/resultAdmin': (context) => ResultAdmin(),
         '/resultMedical': (context) => ResultMedical(),
-        '/profile': (context) => ProfileScreen(userRole: '',),
+        '/profile': (context) => ProfileScreen(userRole: ''),
       },
     );
   }
+}
+
+void OnSelectedDate(DateTime selectedDate) {
+  print('Tanggal yang dipilih: $selectedDate');
 }

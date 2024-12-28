@@ -15,13 +15,6 @@ class HomeScreen extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
         ),
         centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            // Navigasi kembali ke halaman login
-            Navigator.pop(context);
-          },
-        ),
       ),
       body: Container(
         color: Colors.cyan.shade100,
@@ -128,7 +121,7 @@ class HomeScreen extends StatelessWidget {
               break;
             case 1:
               if (userRole == 'Mahasiswa') {
-                Navigator.pushNamed(context, '/scheduleScreen');
+                Navigator.pushNamed(context, '/schedule');
               } else if (userRole == 'Tenaga Medis') {
                 Navigator.pushNamed(context, '/scheduleMedical');
               } else if (userRole == 'Admin') {
@@ -137,7 +130,7 @@ class HomeScreen extends StatelessWidget {
               break;
             case 2:
               if (userRole == 'Mahasiswa') {
-                Navigator.pushNamed(context, '/resultScreen');
+                Navigator.pushNamed(context, '/result');
               } else if (userRole == 'Tenaga Medis') {
                 Navigator.pushNamed(context, '/resultMedical');
               } else if (userRole == 'Admin') {

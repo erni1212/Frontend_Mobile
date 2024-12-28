@@ -172,6 +172,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
               Navigator.pushNamed(context, '/home');
               break;
             case 1:
+              // Tetap di halaman
               break;
             case 2:
               Navigator.pushNamed(context, '/result');

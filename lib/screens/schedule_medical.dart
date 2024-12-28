@@ -91,9 +91,13 @@ class _ScheduleMedicalState extends State<ScheduleMedical> {
             Center(
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/date_screen'); // Navigate to date_screen.dart
+                  Navigator.pushNamed(context, '/dateScreen'); // Navigate to date_screen.dart
                 },
                 child: Text('Lihat Jadwal'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.cyan, 
+                  foregroundColor: Colors.black,
+                ),
               ),
             ),
           ],

@@ -99,6 +99,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       // Logic untuk edit profile
                     },
                     child: Text('Edit Profile'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.cyan,
+                      foregroundColor: Colors.black,
+                    ),
+                  ),
+                  SizedBox(height: 24),
+                  ElevatedButton(
+                    onPressed: () {
+                      // logic untuk log out
+                      Navigator.pushReplacementNamed(context, '/login');
+                    },
+                    child: Text('Log Out'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      foregroundColor: Colors.black,
+                    ),
                   ),
                 ],
               ),
